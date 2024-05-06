@@ -178,7 +178,7 @@ public class Solver {
         this.timeExecution = endTime - startTime; 
         long memoryAfter = runtime.totalMemory() - runtime.freeMemory(); 
         long memoryUsage = memoryAfter - memoryBefore; 
-        this.memoryUsed = memoryUsage / (1024.0 * 1024.0);
+        this.memoryUsed = memoryUsage / (1024.0);
 
         //Return 
         return pqueue.getFirstElmtWithoutRemove();

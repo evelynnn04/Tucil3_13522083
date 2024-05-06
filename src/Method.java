@@ -6,7 +6,7 @@ public class Method {
     static Map<Integer, List<String>> mapOfArray = initialize();
 
     // Nyimpen word yang udah pernah dipake
-    static List<String> wordExist = new ArrayList<String>();
+    public static List<String> wordExist = new ArrayList<String>();
 
     // List char dari A sampe Z
     private static final List<Character> LIST_OF_CHAR = new ArrayList<>();
@@ -91,7 +91,8 @@ public class Method {
                 String wordTemp = lastWord.substring(0, i) + c + lastWord.substring(i + 1);
                 char currChar = lastWord.charAt(i);
 
-                if (Method.isExist(wordTemp, length) && currChar != c && !isUsed(wordTemp)){
+                if (Method.isExist(wordTemp, length) && currChar != c){
+                // if (Method.isExist(wordTemp, length) && currChar != c && !isUsed(wordTemp)){
 
                     visited++;
 
@@ -184,15 +185,20 @@ public class Method {
     }
 
     // Cari word paling deket sama target di list, dipake buat greedy
-    public static Node findMinimumNode(List<Node> list){
-        int minCost = list.get(0).getCost();
-        Node choosenNode = list.get(0);
-        for (Node n : list){
-            if (n.getCost() < minCost){
-                minCost = n.getCost();
-                choosenNode = n;
-            }
+    public static Node findMinimumNode(List<Node> list) throws NoSuchElementException {
+        if (list.isEmpty()){
+            throw new NoSuchElementException("Oh no! Solution not found T_T");
         }
-        return choosenNode;
+        else{
+            int minCost = list.get(0).getCost();
+            Node choosenNode = list.get(0);
+            for (Node n : list){
+                if (n.getCost() < minCost){
+                    minCost = n.getCost();
+                    choosenNode = n;
+                }
+            }
+            return choosenNode;
+        }
     }
 }

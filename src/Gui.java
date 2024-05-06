@@ -101,6 +101,10 @@ public class Gui extends JFrame {
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 startButton.setEnabled(false);
+
+                Method.wordExist.clear();
+                outputTextArea.setText("");
+
                 String start = startTextField.getText();
                 String goal = goalTextField.getText();
                 String method = (String) algorithmChoosen.getSelectedItem();
@@ -131,9 +135,17 @@ public class Gui extends JFrame {
                     outputTextArea.append("Execution time: " + String.format("%.2f", solver.getTimeExecution()) + " ms" + "\n");
                     outputTextArea.append("Memory used: " + String.format("%.2f", solver.getMemoryUsed()) + " mb" + "\n");
                     outputTextArea.append("Node visited: " + solver.getVisitedWords() + " nodes" + "\n");
+
                 } catch (NoSuchElementException ex) {
                     outputTextArea.append(ex.getMessage() + "\n");
                 }
+
+                startButton.setEnabled(true);
+                startTextField.setText("");
+                goalTextField.setText("");
+                startTextField.setText(start);
+                goalTextField.setText(goal);
+                algorithmChoosen.setSelectedItem(method);
             }
         });
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
