@@ -91,8 +91,7 @@ public class Method {
                 String wordTemp = lastWord.substring(0, i) + c + lastWord.substring(i + 1);
                 char currChar = lastWord.charAt(i);
 
-                if (Method.isExist(wordTemp, length) && currChar != c){
-                // if (Method.isExist(wordTemp, length) && currChar != c && !isUsed(wordTemp)){
+                if (Method.isExist(wordTemp, length) && currChar != c && !isUsed(wordTemp)){
 
                     visited++;
 

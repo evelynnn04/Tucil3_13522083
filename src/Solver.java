@@ -65,6 +65,7 @@ public class Solver {
             firstElmtPQueue = pqueue.getFirstElmtWithoutRemove();
  
             word = firstElmtPQueue.getList().get(firstElmtPQueue.getList().size() - 1);
+            System.out.println(word);
         }
 
         // Time & memory 
