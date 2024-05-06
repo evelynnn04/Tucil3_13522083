@@ -120,7 +120,7 @@ public class Method {
                 char currChar = lastWord.charAt(i);
 
                 // Cek wordnya ada di dictionary ato engga
-                if (Method.isExist(wordTemp, length) && currChar != c && !isUsed(wordTemp)){
+                if (Method.isExist(wordTemp, length) && currChar != c){
 
                     visited++;
 

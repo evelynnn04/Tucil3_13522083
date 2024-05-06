@@ -17,7 +17,7 @@ public class Solver {
         this.pqueue = new PQueue();
         this.timeExecution = 0;
         this.memoryUsed = 0;
-        this.visitedWords = 0;
+        this.visitedWords = 1;
     }
 
     // Solve dengan metode UCS, return node 
@@ -97,7 +97,7 @@ public class Solver {
         // Cari semua child 
         int visited;
         visited = Method.findChildGreedy(first, this.length, this.target, listTemp);
-        this.visitedWords += visited;
+        this.visitedWords++;
 
         // Cari node dengan cost minimal 
         Node choosen = Method.findMinimumNode(listTemp);
