@@ -111,6 +111,13 @@ public class Gui extends JFrame {
             
                 if (start.equals(goal)) {
                     outputTextArea.append("You have found the answer!" + "\n");
+                    startButton.setEnabled(true);
+                    return;
+                }
+
+                if (start.length() != goal.length() || !Method.isExist(start, start.length()) || !Method.isExist(goal, goal.length())){
+                    JOptionPane.showMessageDialog(null, "Input Invalid!", "Alert", JOptionPane.INFORMATION_MESSAGE);
+                    startButton.setEnabled(true);
                     return;
                 }
             

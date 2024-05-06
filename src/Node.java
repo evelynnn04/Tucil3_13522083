@@ -35,7 +35,7 @@ public class Node {
 
     // Cost += input cost 
     public void addHn(int cost){
-        this.cost += cost;
+        this.cost = cost;
     }
 
     // Return list of node 
