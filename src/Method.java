@@ -110,8 +110,8 @@ public class Method {
     }
 
     // Nyari semua word yang bisa dikunjungi dari node ori, simpen hasilnya di list, tiap step diitung costnya sesuai beda karakter sama targetnya 
-    public static int findChildGreedy(Node ori, int length, String target, List<Node> list){
-        int visited = 0;
+    public static void findChildGreedy(Node ori, int length, String target, List<Node> list){
+
         for (int i = 0; i < length; i++){
             for (char c : LIST_OF_CHAR){
                 List <String> listOri = ori.getList();
@@ -121,8 +121,6 @@ public class Method {
 
                 // Cek wordnya ada di dictionary ato engga
                 if (Method.isExist(wordTemp, length) && currChar != c){
-
-                    visited++;
 
                     // foundChild = CCtor dari node ori
                     Node foundChild = new Node(ori);
@@ -144,7 +142,6 @@ public class Method {
                 }
             }
         }
-        return visited;
     }
 
     // Nyari semua word yang bisa dikunjungi dari node ori, simpen hasilnya di list, tiap step diitung costnya sesuai beda karakter sama targetnya + 1

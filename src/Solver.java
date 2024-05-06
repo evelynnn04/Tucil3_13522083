@@ -95,8 +95,7 @@ public class Solver {
         List<Node> listTemp = new ArrayList<Node>();
 
         // Cari semua child 
-        int visited;
-        visited = Method.findChildGreedy(first, this.length, this.target, listTemp);
+        Method.findChildGreedy(first, this.length, this.target, listTemp);
         this.visitedWords++;
 
         // Cari node dengan cost minimal 
@@ -107,7 +106,7 @@ public class Solver {
         while (!Method.isMatch(word, this.target, this.length)){
 
             List<Node> listNode = new ArrayList<Node>();
-            visited = Method.findChildGreedy(choosen, this.length, this.target, listNode);
+            Method.findChildGreedy(choosen, this.length, this.target, listNode);
             this.visitedWords++;
 
             choosen = Method.findMinimumNode(listNode);
