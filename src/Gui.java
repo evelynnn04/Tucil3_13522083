@@ -105,8 +105,8 @@ public class Gui extends JFrame {
                 Method.wordExist.clear();
                 outputTextArea.setText("");
 
-                String start = startTextField.getText();
-                String goal = goalTextField.getText();
+                String start = startTextField.getText().toUpperCase();
+                String goal = goalTextField.getText().toUpperCase();
                 String method = (String) algorithmChoosen.getSelectedItem();
             
                 if (start.equals(goal)) {
