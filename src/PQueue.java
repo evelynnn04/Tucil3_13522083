@@ -11,13 +11,15 @@ public class PQueue {
     // Nambahin node ke priority queue, yang costnya kecil taruh depan
     public void add(Node n) {
         int idx = 0;
-        for (Node node : this.pqueue){
-            while (node.getCost() >= n.getCost()){
-                idx++;
+        for (Node node : this.pqueue) {
+            if (node.getCost() > n.getCost()) {
+                break;
             }
+            idx++;
         }
         pqueue.add(idx, n);
     }
+    
     
     // Return first elemen which is node dengan cost paling kecil + remove node tsb
     public Node getFirstElmt() throws NoSuchElementException {
