@@ -96,10 +96,12 @@ Room for improvement:
 
 
 ## Acknowledgements
-- This project was based on [Spesifikasi Tugas Besar 3 IF2211 Stima 2023/2024]([https://docs.google.com/document/d/1HVDyywnUdNz9hStgx5ZLqHypK89hWH8qfERJOiDw6KA/edit](http://bit.ly/spektucil3stima24)).
-- 
+
+- This project was based on [Spesifikasi Tugas Besar 3 IF2211 Stima 2023/2024](https://docs.google.com/document/d/1HVDyywnUdNz9hStgx5ZLqHypK89hWH8qfERJOiDw6KA/edit).
 
 ## Links
-- [Spesifikasi Tugas Besar 3 IF2211 Stima 2023/2024]([https://docs.google.com/document/d/1HVDyywnUdNz9hStgx5ZLqHypK89hWH8qfERJOiDw6KA/edit](http://bit.ly/spektucil3stima24)).
-- [This Repository]([https://github.com/evelynnn04/Tucil3_13522083.git])
-- [The Report [email std]]([https://docs.google.com/document/d/1MDdhX6vOATXgypNhPfJXa2OcuCtfw7UXOzsRt0Tfzss/edit?usp=sharing]).
+
+- [Spesifikasi Tugas Besar 3 IF2211 Stima 2023/2024](https://docs.google.com/document/d/1HVDyywnUdNz9hStgx5ZLqHypK89hWH8qfERJOiDw6KA/edit)
+- [This Repository](https://github.com/evelynnn04/Tucil3_13522083.git)
+- [The Report [email std]](https://docs.google.com/document/d/1MDdhX6vOATXgypNhPfJXa2OcuCtfw7UXOzsRt0Tfzss/edit?usp=sharing)
+
